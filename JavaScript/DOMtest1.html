@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2022-03-05</div>
+    <script>
+        //1.因为我们文档页面从上往下加载，所以先得有标签，所以我们script写道标签的下面
+        //get 获得 element 元素 by 通过 驼峰命名法
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.log(typeof timer);
+        //返回的是一个元素对象
+        console.dir(timer);
+        //console.dir打印我们返回的元素对象 更好的查看里面的属性和方法
+    </script>
+</body>
+</html>

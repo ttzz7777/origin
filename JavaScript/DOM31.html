@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>123</div>
+
+    <script>
+        let div = document.querySelector('div'); 
+        div.addEventListener('click',function(e){
+            console.log(e);
+            //event就是一个事件对象 写道侦听函数的小括号内，当形参来看
+            //事件对象只有当有了对象才会存在,它是系统给我们自动创建的，不需要传递参数
+            //事件对象是我们事件的一系列相关数据的集合 跟事件相关的 比如鼠标点击里面就包含了鼠标的相关信息
+            //鼠标坐标，如果是键盘事件里面就包含的键盘事件的信息 比如 判断用户按下了哪个键
+        })
+    </script>
+</body>
+</html>

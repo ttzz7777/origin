@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let关键字声明的变量具有块级作用域
+        // let a = 10
+        // console.log(a);
+
+        // if (true) {
+        //     let b = 20
+        //     console.log(b);
+        //     if (true) {
+        //         let c = 30
+        //     }
+        // }
+        // console.log(b);
+        // console.log(c);
+        //使用let关键字声明的变量才具有块级作用域，使用var声明的变量不具备块级作用域特性
+        //防止循环变量变成全局变量
+        // 使用let关键字声明的变量具有暂时性死区特性
+        var num = 10
+        if (true) {
+            console.log(num);
+            let num = 20
+        }
+        //let 变量    const 常量 声明常量必须赋初始值 常量就是值（内存地址）不能变化的量
+    </script>
+</body>
+
+</html>

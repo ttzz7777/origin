@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button></button>
+    <script>
+        var btn = document.querySelector('button')
+            // 函数的调用方式
+
+        // 1. 普通函数
+        // 普通函数里的this指向window
+        function fn() {
+            console.log('普通函数的this' + this);
+        }
+        // fn()  fn.call()
+
+        // 2. 对象的方法
+        // this指向的是对象
+        var o = {
+                sayHi: function() {
+                    console.log('普通函数的this' + this);
+                }
+            }
+            // o.sayHi()
+
+        // 3. 构造函数
+        // this指向ldh这个实例对象 原型对象里面的this指向的也是ldh这个实例对象
+        function Star() {
+            console.log('构造函数的this' + this);
+        }
+        // var ldh = new Star()
+
+        // 4. 绑定事件函数
+        // this指向函数的调用者，btn这个按钮对象
+        btn.onclick = function() {
+                console.log('绑定事件函数的this' + this);
+            }
+            // 点击了按钮就可以调用这个函数
+
+        // 5. 定时器函数
+        // this指向window
+        setInterval(function() {
+                console.log('定时器的this' + this);
+            }, 1000)
+            // 每隔一秒钟自动调用
+
+        // 6. 立即执行函数
+        //this指向window
+        (function() {
+            console.log('立即执行函数的this' + this);
+        })()
+        // 不需要调用，自动执行
+    </script>
+</body>
+
+</html>

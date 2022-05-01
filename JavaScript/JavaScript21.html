@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Object.defineProperty() 定义新属性或修改原有的属性
+        let obj = {
+                id: 1,
+                pname: '小米',
+                price: 1000
+            }
+            // Object.defineProperty(obj,prop,decriptor)
+            // obj：必需 目标对象
+            // prop：必需 需定义或修改的属性的名字
+            // descriptor：必需 目标属性所拥有的特性
+
+        Object.defineProperty(obj, 'num', {
+            value: 1000,
+        })
+
+        console.log(obj);
+
+        Object.defineProperty(obj, 'price', {
+            value: 9.9,
+        })
+
+        console.log(obj);
+
+        Object.defineProperty(obj, 'id', {
+            writable: false, //不允许修改这个属性值 改为true则可以被修改
+        })
+
+        //不能被修改
+        obj.id = 2
+        console.log(obj);
+
+        Object.defineProperty(obj, 'address', {
+            value: '中国山东蓝翔技校',
+            writable: false,
+            enumerable: false, //不会被遍历出来,默认为false
+            configurable: false //不允许被删除,默认为false，不能再次修改特性为true
+        })
+        console.log(obj);
+        console.log(Object.keys(obj));
+        delete obj.address
+        console.log(obj);
+    </script>
+</body>
+
+</html>

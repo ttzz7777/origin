@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="message" rows="10" role="50"></textarea> <button>提交</button>
+    <div></div>
+    <script>
+        //替换 replace
+        // var str = 'andy 和 red'
+        //     // var newStr = str.replace('andy', 'baby')
+        // var newStr = str.replace(/andy/, 'baby')
+        // console.log(newStr);
+
+        var text = document.querySelector('textarea')
+        var btn = document.querySelector('button')
+        var div = document.querySelector('div')
+            //replace 只能替换第一个字符串
+            // /表达式/[switch]   g：全局匹配  i:忽略大小写  gi：全局匹配+忽略大小写
+        btn.onclick = function() {
+            div.innerHTML = text.value.replace(/激情|gay|sb/g, '**')
+            text.value = ''
+        }
+    </script>
+</body>
+
+</html>

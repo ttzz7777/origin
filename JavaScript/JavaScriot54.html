@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // find() 用于找出第一个符合条件的数组元素，如果没有找到返回underfined
+        let ary = [{
+            id: 1,
+            name: '张三'
+        }, {
+            id: 2,
+            name: '李四'
+        }]
+        let target = ary.find((item, index) => item.id == 2)
+        console.log(target);
+
+        //findindex() 用于找出第一个符合条件的数组成员的位置，如果没有找到返回-1
+        let ary2 = [1, 5, 10, 15]
+        let index = ary2.findIndex((value, index) => value > 9)
+        console.log(index);
+
+        //includes() 表示某个数组是否包含给定的值，返回布尔值
+        console.log([1, 2, 3].includes(2)); // true
+    </script>
+</body>
+
+</html>

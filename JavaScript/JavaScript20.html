@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"> <button>点击</button>
+    <div></div>
+    <script>
+        //trim方法去除字符串两侧空格（返回一个新的字符串）
+        // let str = '  andy  '
+        // console.log(str);
+        // let str1 = str.trim()
+        // console.log(str1);
+
+        let input = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let div = document.querySelector('div')
+
+        btn.addEventListener('click', function() {
+            if (input.value.trim() === '') {
+                alert('请输入内容')
+            } else {
+                console.log(input.value.trim());
+                console.log(input.value.trim().length);
+                div.innerHTML = input.value.trim()
+            }
+        })
+    </script>
+</body>
+
+</html>

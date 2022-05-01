@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .search {
+            position: relative;
+            height: 80px;
+            width: 200px;
+            margin: 100px auto;
+            border: 1px solid black;
+        }
+
+        .con {
+            display: none;
+            box-shadow: 0 2px 4px black;
+            font-size: 18px;
+            width: 170px;
+            border: 1px solid black;
+            position: absolute;
+            line-height: 20px;
+            left: 10px;
+            top: 20px;
+        }
+
+        .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 21px;
+            left: 25px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+            /* transparent为背景透明 */
+        }
+
+        .jd {
+            position: absolute;
+            left: 10px;
+            top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <div class="con">123</div>
+        <input type="text" placeholder="请输入您的快递单号" class="jd">
+    </div>
+
+    <script>
+        let con = document.querySelector('.con');
+        let jd_input = document.querySelector('.jd');
+        jd_input.addEventListener('keyup', function (e) {
+
+            if (this.value == '') {
+                con.style.display = 'none';
+            } else {
+                con.innerHTML = this.value;
+                con.style.display = 'block';
+            }
+        })
+        //当失去焦点时隐藏con盒子
+        jd_input.addEventListener('blur', function (e) {
+            con.style.display = 'none';
+        })
+        jd_input.addEventListener('focus', function (e) {
+            if (this.value !== '') {
+                con.style.display = 'block';
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 我想要把ol里面的li选出来改为pink */
+    ol li {
+        color: pink;
+    }
+
+    ol li a {
+        color: red;
+        text-decoration: none;
+    }
+
+    .nav li a {
+        color: yellow;
+        text-decoration: none;
+    }
+/* 和 */
+    div,
+    p {
+        color: pink;
+    }
+    
+    div,
+    p,
+    .pig li {
+        color: pink;
+    } 
+    </style> 
+</head>
+<body>
+    <ol type="I">
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul class="nav">
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ul>
+    <ul>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ul>
+    <ul>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ul> 
+
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>光头强</span>
+    <ul class="pig">
+        <li>小猪佩奇</li>
+        <li>猪爸爸</li>
+        <li>猪妈妈</li>
+    </ul>
+</body>
+</html>

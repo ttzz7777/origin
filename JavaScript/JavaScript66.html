@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ES6 提供了新的数据结构Set 它类似于数组 但是成员的值都是唯一的，没有重复的值
+        // Set本身是一个构造函数，用来生成Set数据结构
+
+        // const s = new Set([1, 2, 3, 4, 5, 6])
+        // console.log(s.size);
+
+        // const s1 = new Set(['a', 'a', 'b', 'b'])
+        // console.log(s1.size)
+        // console.log(s1);
+        // //利用set进行数组去重
+        // const ary = [...s1]
+        // console.log(ary);
+
+        // const s = new Set()
+        // console.log(s.add(1).add(2).add(3)); //向set结构中添加值
+        // s.delete(2);
+        // console.log(s); //删除set结构中的2值
+        // console.log(s.has(1)); //表示set结构中是否有1这个值 返回布尔值
+        // s.clear(); //清除set 结构中的所有值
+        // console.log(s);
+
+        //Set结构的实例与数组一样，也拥有forEach()方法，用于对每个成员执行某种操作，没有返回值
+        const s = new Set([1, 2, 3, 4, 5, 6])
+        s.forEach(value => console.log(value));
+    </script>
+</body>
+
+</html>

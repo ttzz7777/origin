@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('click', function (e) {
+            //相对于浏览器窗口可视区的X/Y坐标
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log('-----------------------');
+            //相对于文档页面的X/Y坐标
+            console.log(e.pageX);
+            console.log(e.pageY);
+            console.log('-----------------------');
+            //相对于电脑屏幕的X/Y坐标
+            console.log(e.screenX);
+            console.log(e.screenY);
+            console.log('-----------------------');
+        })
+    </script>
+</body>
+
+</html>

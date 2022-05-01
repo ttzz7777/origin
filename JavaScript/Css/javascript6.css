@@ -1,0 +1,75 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* border-bottom: 1px solid black; */
+}
+
+
+/* span {
+    height: 40px;
+    width: 80px;
+} */
+
+ul li {
+    display: inline-block;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#tab {
+    position: relative;
+    width: 600px;
+    margin: 200px auto;
+    border: 1px solid black;
+}
+
+.tabscon {
+    line-height: 50px;
+    height: 300px;
+}
+
+section {
+    display: inline;
+}
+
+.tabadd {
+    position: absolute;
+    top: 5px;
+    left: 575px;
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.firstnav {
+    height: 40px;
+}
+
+.iconfont {
+    cursor: pointer;
+}
+
+h4 {
+    position: absolute;
+    left: 380px;
+    top: 140px;
+}
+
+.liactive {
+    border-bottom: 0px;
+}
+
+.conactive {
+    display: block;
+}
+
+section {
+    display: none;
+}

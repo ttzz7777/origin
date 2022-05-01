@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="demo.php" method="get" name="name1">  <!--url地址  提交方式 表单域名称-->
+        <label for="text">用户名:</label><input type="text" value="请输入" maxlength="11" id="text"><br>
+        <label for="password">密码:</label><input type="password" value="请输入密码" maxlength="9" id="password"><br>
+        性别:男<input type="radio" name="sex" value="男" checked="checked">女<input type="radio" name="sex" value="女"><br>
+        爱好:吃饭<input type="checkbox" name="choose" checked="checked" value="吃饭">睡觉<input type="checkbox" name="choose" value="睡觉">学习<input type="checkbox" name="choose" value="学习"><br>
+        <input type="submit" value="免费注册"><br>
+        <input type="reset" value="重新填写"><br>
+        <input type="button" value="普通按钮"><br>
+        上传头像:<input type="file"><br>
+        籍贯:
+        <select>
+            <option>北京</option>
+            <option  selected="selected">天津</option>
+            <option>河北</option>
+        </select><br>
+        <textarea rows="4" cols="50" >
+    今日反馈
+        </textarea>
+    </form>
+</body>
+</html>   

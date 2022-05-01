@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            width: 150px;
+            height: 50px;
+            background-color: pink;
+            /* 块级元素的转换 */
+            display: block;
+        }
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+            display: inline;
+        }
+        span {
+            width: 300px;
+            height: 30px;
+            background-color: skyblue;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 块元素：div 1.自己占一行 2.高度、宽度、外边距及内边距都可以控制 3.宽度默认是父亲容器的100% 4.是一个容器及盒子，里面可以放行内或者块级元素-->
+    <!-- 行内元素：span 一行可以放好几个 1.相邻的行内元素在一行上，一行可以显示多个 2.高、宽直接设置是无效的 3.默认宽度就是它本身内容的宽度 4.行内元素只能容纳文本或其他行内元素-->
+    <!-- 行内块元素<img> <input> <td> 1.和相邻行内元素（行内块）在一行上，但是他们之间会有空白缝隙，一行可以显示多个（行内元素特点）2.默认宽度就是它本身内容的宽度（行内元素特点） 3.高度，行高，内外边距都可以控制（块级元素特点）-->
+    <a href="#">金星</a><br>
+    <a href="#">金星</a>
+    <div>我是块级元素</div>
+    <div>我是块级元素</div>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script>
+        // let arr = [1, 2, 3]
+        // console.log(...arr); //以，分割
+        // console.log(1, 2, 3);
+
+        // let ary = ["a", "b", "c"]
+        // console.log(...ary);
+
+        // 合并数组的方式
+        // 1.
+        // let arr1 = [1, 2, 3]
+        // let arr2 = [4, 5, 6]
+        // let arr3 = [...arr1, ...arr2]
+        // console.log(arr3);
+        // 2.
+        // arr1.push(...arr2)
+        // console.log(arr1);
+
+        //扩展运算符可以遍历对象转换为真正的数组
+        var oDivs = document.querySelectorAll('div')
+            // var ary = [...oDivs]
+            // console.log(oDivs);
+            // ary.push('a')
+            // console.log(ary);
+        let arr = Array.from(oDivs, item => item * 2)
+            // Array.from(伪数组) 将伪数组或可遍历对象转换为真正的数组
+            //方法还可以接受第二个参数，作用类似于数组的map()方法，用来对每个
+            //元素进行处理，将处理后的值放入返回的数组
+        console.log(arr);
+        arr.push('a')
+        console.log(arr);
+    </script>
+</body>
+
+</html>

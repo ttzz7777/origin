@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+        span {
+            position: absolute;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <span>夏雨荷</span>
+
+    <script>
+        //动画原理
+        //1. 获得盒子当前位置
+        //2. 让盒子在当前位置加上1个移动距离
+        //3. 利用定时器不断重复这个操作
+        //4. 加上一个结束定时器的条件
+        //5. 注意此元素需要添加定位， 才能使用element.style.left
+        let div = document.querySelector('div')
+        let span = document.querySelector('span')
+        // var timer = setInterval(function () {
+        //     if (div.offsetLeft >= 400) {
+        //         clearInterval(timer)//停止计时器
+        //     } else {
+        //         div.style.left = div.offsetLeft + 1 + 'px'
+        //     }
+        // }, 30)
+
+        //简单动画封装函数
+        function animate(obj, target) { //动画对象，移动位置
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer)//停止计时器
+                } else {
+                    obj.style.left = obj.offsetLeft + 1 + 'px'
+                }
+            }, 30)
+        }
+        animate(div,200)
+        animate(span,400)
+    </script>
+</body>
+
+</html>

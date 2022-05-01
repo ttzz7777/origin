@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        let div = document.querySelector('div')
+        div.addEventListener('mouseup',function(e){
+            //console.log('横坐标：'+e.pageX+'纵坐标：'+e.pageY);//鼠标在页面中的坐标
+            //console.log('横坐标：'+div.offsetLeft+'纵坐标:'+div.offsetTop);//div距离左边和上边的距离
+            console.log('横坐标：'+(e.pageX-div.offsetLeft)+'纵坐标:'+(e.pageY-div.offsetTop));
+        })
+    </script>
+</body>
+</html>

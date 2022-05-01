@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['red', 'green', 'blue', 'pink']
+            // 1. forEach()迭代 遍历
+            // arr.forEach(function(value) {
+            //     if (value === 'green') {
+            //         console.log('找到了该元素');
+            //         // return true   在forEach() return不会终止迭代
+            //     }
+            //     console.log(11);
+            // })
+
+        arr.some(function(value) {
+            if (value === 'green') {
+                console.log('找到了该元素');
+                return true //记得return true 在some中 遇到 return true 就是终止遍历 迭代效率更高
+                    //说明找到了元素，会终止遍历  要是为false则没有找到该元素，继续遍历
+            }
+            console.log(11);
+        })
+
+
+        //如果查询数组中唯一的元素，用some方法更适合
+    </script>
+</body>
+
+</html>

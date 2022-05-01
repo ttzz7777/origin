@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="Image/image1.png" alt="">
+    <script>
+        let img = document.querySelector('img');
+        document.addEventListener('mousemove', function (e) {
+            //mousuemove只要鼠标移动1px像素就会触发这个事件
+            //核心原理： 每次鼠标移动，我们都会获得最新的鼠标坐标，把这个x和y坐标作为图片的top和left值就可以移动图片
+            let x = e.pageX;
+            let y = e.pageY;
+            console.log('X坐标是：'+x+'Y坐标是：'+y);
+            //千万不要忘记给left和top添加px单位
+            img.style.left = x-12.5 + 'px';
+            img.style.top = y-12.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>

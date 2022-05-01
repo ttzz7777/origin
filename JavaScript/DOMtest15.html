@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead th {
+            font-size: 14px;
+            color: aliceblue;
+            background-color: rgb(0, 102, 255);
+        }
+
+        tbody tr {
+            font-size: 12px;
+            height: 30px;
+            background-color: #f0f0f0;
+        }
+
+        tbody tr:hover {
+            /* 手型鼠标 */
+            cursor: pointer;
+            background-color: #fafafa;
+        }
+
+        table {
+            width: 200px;
+            text-align: center;
+            margin: 100px auto;
+            border-collapse: separate;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <!-- checked="checked"默认被选中 -->
+                <th><input type="checkbox" id="j_cbAll"></th>
+                <th>商品</th>
+                <th>价钱</th>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>iPad</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>iPad Air</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Apple Watch</td>
+                    <td>2000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var j_cbAll = document.getElementById('j_cbAll');
+        var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        j_cbAll.onclick = function () {
+            // console.log(this.checked); 它可以得到抢钱复选框的选中状态如果是true就是选中，如果是false 就是未选中
+            for (var i = 0; i < j_tbs.length; i++) {
+                j_tbs[i].checked = this.checked;
+            }
+        }
+        for (var i = 0; i < j_tbs.length; i++) {
+            j_tbs[i].onclick = function () {
+                var flag = true;
+                for(var i = 0;i<j_tbs.length;i++){
+                    if(!j_tbs[i].checked){
+                        // j_cbAll.checked = false;
+                        flag = false;
+                        break;//退出for循环 这样可以提高执行效率
+                    }
+                }
+                j_cbAll.checked = flag;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    手机号码：<input type="text" maxlength="11">
+    <button>点击获取</button>
+
+    <script>
+
+        let btn = document.querySelector('button')
+
+        btn.addEventListener('click', function () {
+            let time = 5
+            btn.disabled = true
+            let jishiqi = setInterval(function () {
+                if (time > 0) {
+                    btn.innerHTML = '还剩' + time + '秒再次点击'
+                    time--
+                } else if (time == 0) {
+                    clearInterval(jishiqi)
+                    btn.disabled = false
+                    btn.innerHTML = '点击获取'
+                    time = 5;
+                }
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

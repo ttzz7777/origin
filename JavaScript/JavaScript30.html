@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 为整个脚本(script标签) 开启严格模式-->
+    <script>
+        'use strict';
+        // 下面js代码就会按照严格模式执行代码
+        // 1. 变量名必须先声明再使用
+        // 2. 不能删除已经定义好的变量
+        // 3. 严格模式下全局作用下this指向underfined
+        // 4. 严格模式下，如果 构造函数不加new调用， this 会报错
+        // 5. 定时器里面的this指向window
+        num = 10
+        console.log(num);
+    </script>
+    <script>
+        //立即执行函数
+        (function() {
+            'use strict';
+        })()
+    </script>
+    <!-- 为某个函数开启严格模式 -->
+    <script>
+        //此时只是给fn函数开启严格模式
+        function fn() {
+            'use strict';
+            //下面的代码按照严格模式执行
+        }
+
+        function fun() {
+            //里面的函数按照普通模式执行
+        }
+    </script>
+</body>
+
+</html>

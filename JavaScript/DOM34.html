@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .son {
+            text-align: center;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            line-height: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .father {
+            position: relative;
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div> 
+    <script>
+        //dom事件流三个阶段
+        //son-->father-->body-->html 
+        //1. JS代码中只能执行捕获或者冒泡其中的一个阶段
+        //2. onclick 和 attachEvent（ie）只能得到冒泡阶段。
+        //3. 捕获阶段 如果addEventListener 第三个参数时是true 那么则处于捕获阶段
+        let son = document.querySelector('.son');
+        son.addEventListener('click',function(e){
+            alert('son');
+            e.stopPropagation();//阻止向上传
+        },false);
+        let father = document.querySelector('.father');
+        father.addEventListener('click',function(e){
+            alert('father');
+
+        },);
+    </script>
+</body>
+</html>

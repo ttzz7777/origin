@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // foreach 迭代（遍历） 数组
+        let arr = [1, 2, 3]
+        let sum = 0
+        arr.forEach(function(value, index, array) {
+            console.log('每个数组元素' + value);
+            console.log('每个数组元素的索引号' + index);
+            console.log('数组本身' + array);
+            sum += value
+        })
+        console.log(sum);
+
+        // filter 筛选数组,不断的遍历数组 返回的是一个新的数组,需要变量接收
+        let arr1 = [12, 66, 3, 88]
+        let newArr1 = arr1.filter(function(value, index) {
+            // return value >= 20
+            // if (value % 2 === 0) {
+            //     return value
+            // }
+            return value % 2 === 0
+        })
+        console.log(newArr1);
+
+        // some 查找数组中是否有满足条件的元素,查找到第一个满足条件的则不再进行循环
+        let arr2 = ['田浩', '田', '浩']
+        let newArr2 = arr2.some(function(value, index) {
+            return value === '田'
+        })
+        console.log(newArr2);
+
+        // 1. filter 也是查找满足条件的元素 返回的是一个数组 而且是吧所有满足条件的元素返回回来
+        // 2. some 也是查找满足条件的元素 返回的是一个布尔值 true或者false 如果查找到第一个满足条件的元素就终止循环
+    </script>
+</body>
+
+</html>

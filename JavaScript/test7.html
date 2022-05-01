@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [2, 6, 1, 77, 53, 25, 7]
+        var max = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        console.log('该数组里面的最大值是：' + max);
+
+        var arr1 = ['red', 'green', 'blue', 'pink']
+        var str = ''
+        for (var i = 0; i < arr1.length; i++) {
+            str += arr1[i] + '|';
+        }
+        console.log(str);
+
+        var arr2 = [];
+        for(var i=0;i<100;i++){
+            arr2[i]=i+1
+        }
+        console.log(arr2);
+        // for(var i=0;i<arr2.length;i++){
+        //     console.log(arr2[i]);
+        // }
+        var arr3 = [2,0,6,1,77,0,52,0,25,7]
+        var newArr =[];
+        for(var i=0;i<arr3.length;i++){
+            if(arr3[i]>10){
+                newArr[newArr.length]=arr3[i];
+            }
+        }
+        console.log(newArr);
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

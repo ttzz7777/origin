@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS层叠性，指多种CSS样式的叠加 1.样式冲突，遵循的原则就是就近原则，即CSS的书写位置 2.样式不冲突，不会层叠 */
+        /* CSS继承性，子标签会继承父标签的某些样式，子承父业 text-,font-,line-以及color*/
+        /* CSS多样性，权重 继承的权重为0*/
+        /* 符合选择器的选择会叠加  */
+        div {
+            color: pink;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>龙生龙,凤生凤,老鼠生的孩子会打洞</p>
+    </div>
+</body>
+</html>

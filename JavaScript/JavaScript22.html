@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //用于获取对象自身所有的属性
+        let obj = {
+            id: 1,
+            pname: '小米',
+            price: 1999,
+            num: 2000
+        }
+
+        console.log(obj);
+        let arr = Object.keys(obj)
+        console.log(arr);
+        //效果类似for...in
+        //返回一个由属性名组成的数组
+        arr.forEach(function(value) {
+            console.log(value);
+        })
+    </script>
+</body>
+
+</html>

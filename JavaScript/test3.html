@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+        var number = prompt('请输入班级人数：');
+        alert(number);
+        for (var i = 1; i <= number; i++) {
+            var score=prompt('请输入第' + i + '个学生的成绩：')
+        // 字符串类型转换为浮点型
+            sum += parseFloat(score);
+        }
+        alert('总成绩是' + sum);
+        alert('平均成绩是' + sum / number);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

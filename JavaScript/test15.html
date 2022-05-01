@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var date = new Date();
+        console.log(date);
+        var mydate = new Date(2019, 10, 11);
+        console.log(mydate);
+        var mydate1 = new Date('2000-05-11 16:31:00')
+        console.log(mydate1);
+
+        var date1 = new Date();
+        console.log(date.getFullYear());//返回当前日期的年
+        console.log(date.getMonth() + 1);//返回当前日期的月份，小一个月
+        console.log(date.getDate());//返回当前日期的日
+        console.log(date.getDay());//返回当前日期的周几
+
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var day = date.getDay();
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        console.log('今天是' + year + '年' + month + '月' + dates + '日'+arr[day]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

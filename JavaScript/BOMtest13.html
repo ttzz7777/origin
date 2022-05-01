@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid black;
+            overflow: auto;
+            /* 超出时自动添加滚动条 */
+        }
+    </style>
+</head>
+<body>
+    <div>我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容 我是内容v</div>
+
+    <script>
+        //scroll 系列 实际大小
+        let div = document.querySelector('div')
+        console.log(div.scrollHeight)
+        console.log(div.clientHeight)
+        console.log(div.offsetHeight)
+        //scroll是滚动事件
+        div.addEventListener('scroll',function(){
+            console.log(div.scrollTop);
+        })
+    </script>
+</body>
+</html>

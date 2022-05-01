@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        /* id选择器口诀： 样式#定义,结构id定义,只能调用一次,别人切勿使用      */
+/* 标签选择器    标题标签比较特殊,需要单独指定文字大小     */
+        p {
+            color: red;
+        }
+/* 类选择器 */
+        .box {
+            width: 100px;
+            height: 100px;
+            font-size: 30px;
+        }
+        .red {
+            /* width: 100px; */
+            /* height: 100px; */
+            background-color: red;
+        }
+        .green {
+            /* width: 100px; */
+            /* height: 100px; */
+            background-color: green;
+        }
+/* id选择器 只能使用一次*/
+        #pink {
+            color: pink;
+            font-size: 35px;
+        }
+/* 通配符选择器 不需要调用,给所有元素都修改样式 */
+        * {                 
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="red box">红色</div>
+    <div class="green box">绿色</div>
+    <div class="red box">红色</div>
+    <div id="pink">迈克尔杰克逊</div>   <!--pink只能调用一次-->
+
+    <div>我的</div>
+    <span>我的</span>
+    <ul>
+        <li>还是我的</li>
+    </ul>
+</body>
+</html>

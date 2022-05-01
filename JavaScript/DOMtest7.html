@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0px;
+            outline: none;
+        }
+
+        .box img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 点击按钮将密码框切换为文本框，并可以查看密码明文 -->
+    <div class="box">
+        <label for="">
+            <img src="Image/image1.png" alt="图片消失了" id="eye">
+        </label>
+        <input type="password" name="" id="pwd">
+    </div>
+    <script>
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        var flag = 0;
+        eye.onclick = function () {
+            //点击一次之后，flag一定要变化
+            if (flag == 0) {
+                pwd.type = 'text';
+                eye.src = 'Image/image2.png';
+                flag = 1;
+            } else {
+                pwd.type = 'password';
+                eye.src = 'Image/image1.png';
+                flag = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>

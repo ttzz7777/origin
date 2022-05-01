@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-size: 20px;
+            text-align: center;
+            background-color: black;
+            color: #fff;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        div {
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour"></span>
+        <span class="min"></span>
+        <span class="second"></span>
+        <button class="begin">开启定时器</button>
+        <button class="stop">停止计时器</button>
+    </div>
+
+    <script>
+        const begin = document.querySelector('.begin')
+        const stop1 = document.querySelector('.stop')
+        const hour = document.querySelector('.hour')//小时的黑色盒子
+        const min = document.querySelector('.min')//分钟的黑色盒子
+        const second = document.querySelector('.second')//秒数的黑色盒子
+        const inputTime = +new Date('2022-4-6 20:50:00')//返回的是用户输入时间的总的毫秒数
+
+        //我们先调用一次这个函数，防止第一次刷新页面有空白
+        countDown();
+        let jishiqi = null; //全局变量 null是一个空对象
+        //开启定时器
+
+        function countDown() {
+            let nowTime = +new Date()//返回的是当前时间总的毫秒数
+            let times = (inputTime - nowTime) / 1000//times是生于时间总的毫秒数
+            let h = parseInt(times / 60 / 60 % 24)//时
+            h = h < 10 ? '0' + h : h
+            hour.innerHTML = h//把剩余的小时给小时黑色盒子
+            let m = parseInt(times / 60 % 60)//分
+            m = m < 10 ? '0' + m : m
+            min.innerHTML = m
+            let s = parseInt(times % 60)//当前的秒
+            s = s < 10 ? '0' + s : s
+            second.innerHTML = s
+        }
+
+        begin.addEventListener('click', function () {
+            jishiqi = setInterval(countDown, 1000)
+        })
+        stop1.addEventListener('click', function () {
+            clearInterval(jishiqi)
+        })
+    </script>
+</body>
+
+</html>

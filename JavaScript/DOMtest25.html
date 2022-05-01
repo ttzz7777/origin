@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <button>复制</button>
+    <script>
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        //1. node.cloneNode();
+        //如果括号参数为空或者为false，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点
+        btn.onclick = function () {
+            let lili = ul.children[0].cloneNode();
+            ul.appendChild(lili)
+        }
+    </script>
+</body>
+
+</html>

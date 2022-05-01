@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    </title>
+</head>
+<body>
+    <p>
+        每个表格从一个 table 标签开始。 
+        每个表格行从 tr 标签开始。
+        每个表格的数据从 td 标签开始。
+    </p>
+
+
+    <h4>三行三列</h4>   <!--tr为行，td为列-->
+<table border="1" cellpadding=""10">  <!--边框-->
+    <!--单元格边距：Cell padding   单元格间距：Cell spacing-->
+    <caption></caption>  <!--标题-->
+    <tr>
+        <th>第一</th>
+        <th>第二</th>
+        <th>第三</th>
+     </tr>
+    <tr>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+    <tr>
+        <td>700</td>
+        <td>800</td>
+        <td>900</td>
+    </tr>
+</table>
+<h4>单元格跨两列:</h4>
+<table border="1">
+<tr>
+  <th>Name</th>
+  <th colspan="2">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>单元格跨两行:</h4>
+<table border="1">
+<tr>
+  <th>First Name:</th>
+  <td>Bill Gates</td>
+</tr>
+<tr>
+  <th rowspan="2">Telephone:</th>
+  <td>555 77 854</td>
+</tr>
+<tr>
+  <td>555 77 855</td>
+</tr>
+</table>
+</body>
+</html>

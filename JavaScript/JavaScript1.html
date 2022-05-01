@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 创建类class 创建一个明星类
+        //类中的函数不需要加function()进行声明
+        class Star {       //首字母大写
+            constructor(uname,age){
+                this.uname=uname
+                this.age=age
+            }
+            sing(sname) {
+                console.log(this.uname+'唱了'+sname);
+            }
+
+        }
+        //2. 利用类创建对象 new
+        let ldh = new Star('刘德华',19)
+        console.log(ldh.uname+','+ldh.age)
+        let zxy = new Star('张学友',18)
+        console.log(zxy.uname+','+zxy.age)
+        ldh.sing('冰雨');
+        zxy.sing('李香兰');
+    </script>
+</body>
+</html>

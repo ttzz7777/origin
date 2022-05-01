@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">唐伯虎</button>
+    <div>123</div>
+    <script>
+        //1.事件是由三部分组成 事件源 事件类型 事件处理程序 我们也称为事件三要素
+        var btn = document.getElementById('btn');
+        btn.onclick=function(){
+            alert('点秋香');
+        }
+
+        var divs = document.querySelector('div');
+        divs.onclick=function(){
+            console.log('我被选中了');
+        }
+    </script>
+</body>
+</html>

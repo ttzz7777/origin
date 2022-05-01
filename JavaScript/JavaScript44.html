@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 两次是设定某个模式出现的 次数
+        var reg = /^[a-zA-Z0-9_-]{6,12}$/ //这个模式用户只能输入英文字母 数字 下划线 短横线
+            //但是有边界符[] 这就限定了只能多选1
+        console.log(reg.test('Th200511'));
+    </script>
+</body>
+
+</html>

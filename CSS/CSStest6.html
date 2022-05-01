@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* a(链接）要专门设定一个样式 */
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        /* 选择所有未被访问的链接 */
+        a:link {
+            color: #333; 
+        }
+
+        /* 选择所有已被访问的链接 */
+        a:visited {
+            color: yellow;
+        }
+
+        /* 选择鼠标指针位于其上的链接 */
+        a:hover {
+            color: green;
+        }
+
+        /* 选择活动链接（鼠标按下未弹起的链接） */
+        a:active {
+            color: red;
+        }
+
+        /* 焦点的选择器,针对input表单元素 */
+        input:focus {
+            background-color: yellow;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="CSStest4.html">小猪佩奇</a>
+    <input type="button" value="我是一个按钮">
+</body>
+
+</html>

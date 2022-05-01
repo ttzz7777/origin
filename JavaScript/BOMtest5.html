@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.setInterval
+        //语法规范： window.setInterval（调用函数，延时时间）
+        //setTimeout 延时时间到了，就去调用这个回调函数，只调用ICi，就结束了这个定时器
+        //setInterval 每隔这个延时时间，就去调用这个回调函数，回调哟个很多次
+        setInterval(function(){
+            alert('爆炸了')
+        },3000)
+    </script>
+
+</body>
+</html>
