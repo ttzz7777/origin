@@ -1,0 +1,444 @@
+/*
+--------------------
+Author: zengcheng
+Updated: 20200707
+--------------------
+*/
+/*html{-webkit-text-size-adjust:none;}*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none
+}
+
+:focus {
+  outline: 0
+}
+
+ins {
+  text-decoration: none
+}
+
+del {
+  text-decoration: line-through
+}
+
+/*html5 reset*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/*section,article,aside,header,footer,nav,dialog,figure{display:block;}*/
+menu,
+figure {
+  margin: 0;
+  padding: 0;
+}
+html{
+	height: 100%;
+}
+
+body {
+  min-width: 1190px;
+  height: 100%;
+  color: #555;
+  font: normal 14px/1.5 tahoma, "Microsoft YaHei", Simsun, "Arial Unicode MS", Mingliu, Arial, Helvetica;
+  -webkit-font-smoothing: antialiased;
+}
+
+table {
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+table,
+td,
+th {
+  vertical-align: middle;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+input,
+select,
+textarea {
+  font-family: tahoma, "Microsoft YaHei", Simsun, "Arial Unicode MS", Mingliu, Arial, Helvetica;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/*input:focus{outline:0 none}*/
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+a img {
+  border: none;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+td p {
+  margin: 0;
+}
+
+fieldset {
+  padding: 0 1em 1em 1em;
+  margin: 1.6em 0;
+  border: 1px solid #ccc;
+}
+
+/*** padding-top is margin-top for fieldsets in Opera ***/
+legend {
+  padding-left: .8em;
+  padding-right: .8em;
+}
+
+legend+* {
+  margin-top: 1em;
+}
+
+/*** compensates for the opera margin bug ***/
+sub {
+  font-size: smaller;
+  line-height: 0;
+  vertical-align: sub;
+}
+
+sup {
+  font-size: smaller;
+  line-height: 0;
+  vertical-align: super;
+}
+
+a {
+  color: #3657c9;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff3333;
+  text-decoration: underline;
+}
+
+
+/*
+a:visited{color:#800080;}
+a:hover,a:active{color:#FF3300;text-decoration:underline;}
+a:focus{outline:1px dotted}
+
+::selection {
+	color: #000000;
+	background-color: #FF0000;
+}
+::-moz-selection {
+	color: #000000;
+	background: #FF0000;
+}*/
+
+/*text style*/
+.t12 {
+  font-size: 12px;
+}
+
+.t14 {
+  font-size: 14px;
+}
+
+.t16 {
+  font-size: 16px;
+}
+
+.t18 {
+  font-size: 18px;
+}
+
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff;
+}
+
+.gray {
+  color: #ccc;
+}
+
+.red {
+  color: #db0210;
+}
+
+.blue {
+  color: #3657C9;
+}
+
+.green {
+  color: #008000;
+}
+
+.gold {
+  color: #e4ae6f;
+}
+
+.mcolor {
+  color: #900;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
+}
+
+.delete {
+  text-decoration: line-through;
+}
+
+.nob {
+  border: none;
+  background: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.float_left {
+  float: left;
+  padding: 7px;
+}
+
+.float_right {
+  float: right;
+  padding: 7px;
+}
+
+.img_float_left {
+  float: left;
+  clear: left;
+  margin: 0 20px 10px 0;
+}
+
+.img_float_right {
+  float: right;
+  clear: right;
+  margin: 0 0 10px 20px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.simsun {
+  font-family: "Simsun";
+}
+
+.highlight {
+  background: #ff0;
+}
+
+.thin {
+  font-weight: lighter;
+}
+
+.error_tips,
+.notice_tips,
+.success_tips {
+  padding: .3em .8em;
+  margin-bottom: 1em;
+  border: 2px solid #ddd;
+  white-space: nowrap;
+}
+
+.error_tips {
+  background: #FBE3E4;
+  color: #8a1f11;
+  border-color: #FBC2C4;
+}
+
+.notice_tips {
+  background: #FFF6BF;
+  color: #514721;
+  border-color: #FFD324;
+}
+
+.success_tips {
+  background: #E6EFC2;
+  color: #264409;
+  border-color: #C6D880;
+}
+
+.error_tips a {
+  color: #8a1f11;
+}
+
+.notice_tips a {
+  color: #514721;
+}
+
+.success_tips a {
+  color: #264409;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.tdu {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  color: #f00;
+}
+
+.hidden {
+  display: none;
+}
+
+.oh {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.lefthalf {
+  float: left;
+  width: 48%;
+}
+
+.righthalf {
+  float: right;
+  width: 48%;
+}
+
+.hr {
+  margin: 0.5em 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.z-index {
+  position: relative;
+  z-index: 998;
+}
+/**==========END==========**/

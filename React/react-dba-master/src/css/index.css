@@ -1,0 +1,146 @@
+.bodybg{
+	background:url("../images/bodybg.jpg");
+	position: relative
+}
+.login-all{
+	min-width: 1200px;
+	min-height: 100vh;
+	background: url(../images/bgbody_bot.png) bottom center no-repeat;
+}
+.login-tit{
+	width: 540px;
+	margin: auto;
+	text-align: center;
+}
+.login-tit img{
+	display: inline-block;
+}
+.login-content{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -600px;
+	margin-top: -290px;
+	overflow: hidden;
+	width: 1200px;
+	height: 580px;
+}
+.login-content-left{
+	float: left;
+	width: 520px;
+}
+.login-content-right{
+	float: right;
+	width: 480px;
+	background: url(../images/login_box_s.png) bottom center no-repeat;
+	padding-bottom: 60px;
+	padding-top: 140px;
+}
+.login-form{
+	width: 350px;
+	margin: auto;
+}
+.login-top{
+	height: 90px;
+	background: url(../images/login_box_top.png) top center no-repeat;
+}
+.login-top h3{
+	font-size: 26px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 90px;
+}
+.login-center{
+	background: url(../images/login_box_cen.png) top center repeat-y;
+}
+.login-input-box{
+	width: 300px;
+	margin: auto;
+}
+.login-input{
+	border-radius: 8px;
+	padding-left: 40px;
+	margin-bottom: 20px;
+	transition: all 1s ease;
+
+}
+.login-icon-name{
+	border: 1px solid rgba(34,170,255,0.3);
+	background: rgba(12,22,54,0.3) url(../images/login_form_name.png) 8px center no-repeat;
+}
+.login-icon-name:hover{
+	border: 1px solid rgba(34,170,255,1);
+	background:rgba(12,22,54,0.8) url(../images/login_form_name.png) 8px center no-repeat;
+}
+.login-icon-pass{
+	border: 1px solid rgba(34,170,255,0.3);
+	background:rgba(12,22,54,0.3) url(../images/login_form_pass.png) 8px center no-repeat;
+}
+.login-icon-pass:hover{
+	border: 1px solid rgba(34,170,255,1);
+	background:rgba(12,22,54,0.8) url(../images/login_form_pass.png) 8px center no-repeat;
+}
+.login-input input{
+	width: 94%;
+	height: 36px;
+	line-height: 36px;
+	border: 0;
+	background: none;
+	color: #fff;
+	font-size: 16px;
+}
+.login-enter{
+	text-align: center;
+	padding-top: 20px;
+}
+.login-enter button{
+	width: 300px;
+	height: 40px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #fff;
+	background: #22aaff;
+	border-radius: 8px;
+	border: 1px solid rgba(34,170,255,1);
+	cursor: pointer;
+	transition: all 1s ease;
+}
+.login-enter button:hover{
+	background: #177AE5;
+}
+.form-com{
+	padding: 30px 30px 10px 30px;
+	text-align: center;
+	font-size: 12px;
+	opacity: 0.7;
+	color: #fff;
+}
+.login-bot{
+	height: 38px;
+	background: url(../images/login_box_bot.png) bottom center no-repeat;
+}
+
+.ant-input-affix-wrapper{
+	background:none;
+}
+.ant-input-password-icon{
+	color:#ffffff;
+}
+input#username{
+	color:#ffffff;
+	background:none;
+}
+input#password{
+	color:#ffffff;
+	background:none;
+}
+/*浏览器自动填充样式的修改*/
+input#username:-webkit-autofill{
+	-webkit-text-fill-color: #ffffff !important;
+	-webkit-box-shadow: 0 0 0 40px #0D1A3D inset !important;
+}
+input#password:-webkit-autofill{
+	 -webkit-text-fill-color: #ffffff !important;
+	 -webkit-box-shadow: 0 0 0 40px #0D1A3D inset !important;
+ }
